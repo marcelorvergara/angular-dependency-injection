@@ -11,7 +11,4 @@ export class ActiveUsersComponent {
 
   constructor(private userService: UsersService) {}
 
-  onSetToInactive(id: number) {
-    this.userService.onSetToInactive(id)
-  }
 }
