@@ -4,16 +4,13 @@ import { UsersService } from './users.service';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  providers: [UsersService]
 })
-export class AppComponent implements OnInit{
-  activeUsers: string[] = []
-  inactiveUsers: string[] = []
+export class AppComponent {
 
-  constructor(private usersService: UsersService){}
-
-  ngOnInit(): void {
-      this.activeUsers = this.usersService.activeUsers;
-      this.inactiveUsers = this.usersService.inactiveUsers;
-  }
+  // ngOnInit(): void {
+  //     this.activeUsers = this.usersService.activeUsers;
+  //     this.inactiveUsers = this.usersService.inactiveUsers;
+  // }
 }
